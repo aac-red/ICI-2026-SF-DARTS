@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICI 2026 SF DARTS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+<div class="prism-bg" id="prismBg" aria-hidden="true"></div>
+<script src="prism.js?v=9"></script>
+<div class="faceoff left" id="face1" aria-hidden="true"></div>
+<div class="faceoff right" id="face2" aria-hidden="true"></div>
+<div class="wrap">
+  <div class="title on-bg">ICI 2026 SF DARTS</div>
+  <div class="sub on-bg">20 down to 12 &amp; Bull — type each player's hit count · tap a score to edit it</div>
+
+  <div class="players">
+    <div class="pcard p1">
+      <div class="logo-btn" id="logo1">+
+        <input type="file" accept="image/png,image/jpeg" id="logoInput1">
+      </div>
+      <input class="pname" id="name1" value="Player 1" maxlength="16" aria-label="Player 1 name">
+      <div class="stats">
+        <div class="stat">
+          <input class="score" id="score1" type="number" inputmode="numeric" step="1" value="0" aria-label="Player 1 total points (editable)">
+          <div class="stat-label">Points</div>
+        </div>
+        <div class="stat">
+          <div class="base" id="closed1" aria-label="Player 1 closed numbers">0</div>
+          <div class="stat-label">Base</div>
+        </div>
+      </div>
+      <div class="firstcount" id="first1">★ 0 first</div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="pcard p2">
+      <div class="logo-btn" id="logo2">+
+        <input type="file" accept="image/png,image/jpeg" id="logoInput2">
+      </div>
+      <input class="pname" id="name2" value="Player 2" maxlength="16" aria-label="Player 2 name">
+      <div class="stats">
+        <div class="stat">
+          <input class="score" id="score2" type="number" inputmode="numeric" step="1" value="0" aria-label="Player 2 total points (editable)">
+          <div class="stat-label">Points</div>
+        </div>
+        <div class="stat">
+          <div class="base" id="closed2" aria-label="Player 2 closed numbers">0</div>
+          <div class="stat-label">Base</div>
+        </div>
+      </div>
+      <div class="firstcount" id="first2">★ 0 first</div>
+    </div>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="status on-bg" id="status" aria-live="polite"></div>
+  <div class="actions">
+    <button class="btn" id="newGame">New game</button>
+    <button class="btn" id="resetAll">Reset players</button>
+  </div>
+  <div class="legend on-bg">Type the number of hits on your side of each number · closing a number (3 hits) before your opponent lets extra hits score points · the highlighted mark and colored number show who closed it first</div>
+</div>
+
+<script src="script.js?v=9"></script>
+</body>
+</html>
